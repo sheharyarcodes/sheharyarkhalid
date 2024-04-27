@@ -1,70 +1,47 @@
 import React from "react";
-// import { Col, Row } from "react-bootstrap";
-import { CgCPlusPlus } from "react-icons/cg";
-import {
-  DiJavascript1,
-  DiReact,
-  DiNodejs,
-  DiMongodb,
-  DiPython,
-  DiGit,
-  DiJava,
-} from "react-icons/di";
-import {
-  SiRedis,
-  SiFirebase,
-  SiNextdotjs,
-  SiSolidity,
-  SiPostgresql,
-} from "react-icons/si";
-import { TbBrandGolang } from "react-icons/tb";
 
-function Techstack() {
-  return;
-  <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-    <Col xs={4} md={2} className="tech-icons">
-      <CgCPlusPlus />
-    </Col>
-    <Col xs={4} md={2} className="tech-icons">
-      <DiJavascript1 />
-    </Col>
-    <Col xs={4} md={2} className="tech-icons">
-      <TbBrandGolang />
-    </Col>
-    <Col xs={4} md={2} className="tech-icons">
-      <DiNodejs />
-    </Col>
-    <Col xs={4} md={2} className="tech-icons">
-      <DiReact />
-    </Col>
-    <Col xs={4} md={2} className="tech-icons">
-      <SiSolidity />
-    </Col>
-    <Col xs={4} md={2} className="tech-icons">
-      <DiMongodb />
-    </Col>
-    <Col xs={4} md={2} className="tech-icons">
-      <SiNextdotjs />
-    </Col>
-    <Col xs={4} md={2} className="tech-icons">
-      <DiGit />
-    </Col>
-    <Col xs={4} md={2} className="tech-icons">
-      <SiFirebase />
-    </Col>
-    <Col xs={4} md={2} className="tech-icons">
-      <SiRedis />
-    </Col>
-    <Col xs={4} md={2} className="tech-icons">
-      <SiPostgresql />
-    </Col>
-    <Col xs={4} md={2} className="tech-icons">
-      <DiPython />
-    </Col>
-    <Col xs={4} md={2} className="tech-icons">
-      <DiJava />
-    </Col>
-  </Row>;
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiRedux,
+  SiTailwindcss,
+} from "react-icons/si";
+import { FaReact, FaGitAlt, FaSass } from "react-icons/fa";
+
+function TechStack() {
+  return (
+    <div className="flex py-10 flex-wrap justify-center gap-4 md:gap-8 text-4xl md:text-5xl lg:text-6xl">
+      <div className="h-10 w-10 flex justify-center items-center text-red-600 relative">
+        {/* <div className="z-20 invisible group-hover:inline-block shadow-sm opacity-0 tooltip bg-red-600 font-semibold text-white text-sm px-2 py-1 rounded absolute -top-full left-1/2 transform -translate-x-1/2 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+          HTML5
+        </div> */}
+        <SiHtml5 className="cursor-pointer hover:opacity-80" />
+      </div>
+
+      <div className="h-10 w-10 flex justify-center items-center text-blue-600">
+        <SiCss3 className="cursor-pointer hover:opacity-80" />
+      </div>
+      <div className="h-10 w-10 flex justify-center items-center text-yellow-600">
+        <SiJavascript className="cursor-pointer hover:opacity-80" />
+      </div>
+      <div className="h-10 w-10 flex justify-center items-center text-blue-600">
+        <FaReact className="cursor-pointer hover:opacity-80" />
+      </div>
+      <div className="h-10 w-10 flex justify-center items-center text-purple-600">
+        <SiRedux className="cursor-pointer hover:opacity-80" />
+      </div>
+      <div className="h-10 w-10 flex justify-center items-center text-cyan-600">
+        <SiTailwindcss className="cursor-pointer hover:opacity-80" />
+      </div>
+      <div className="h-10 w-10 flex justify-center items-center text-pink-600">
+        <FaSass className="cursor-pointer hover:opacity-80" />
+      </div>
+      <div className="h-10 w-10 flex justify-center items-center text-orange-600">
+        <FaGitAlt className="cursor-pointer hover:opacity-80" />
+      </div>
+    </div>
+  );
 }
 
-export default Techstack;
+export default TechStack;

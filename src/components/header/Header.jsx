@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Logo, Container } from "../";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
@@ -12,11 +12,12 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Header = () => {
   const [expand, setExpand] = useState(false);
+
   const items = [
     {
       name: "Home",
       icon: <AiOutlineHome />,
-      to: "#",
+      to: "#home",
     },
     {
       name: "About",
@@ -35,28 +36,26 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-gray-900">
+    <header className="fixed w-full z-40 bg-black">
       <Container>
         <nav className="relative flex justify-between items-center px-10 py-6">
           <Logo />
           <ul className="hidden md:flex items-center gap-6">
             {items.map((item) => (
               <li key={item.name}>
-                <Link
+                <NavLink
                   to={item.to}
-                  onClick={() => updateExpanded(false)}
-                  className="flex items-center text-blue-400 hover:text-blue-300 font-semibold gap-1 border-b-2 border-transparent hover:border-blue-300 transition-all"
-                  aria-current="page"
+                  className={`flex items-center text-gray-200 hover:text-gray-100 font-semibold gap-1 border-b-2 border-transparent hover:border-gray-100 transition-all`}
                 >
                   <span className="text-sm">{item.icon}</span>
                   {item.name}
-                </Link>
+                </NavLink>
               </li>
             ))}
             <li className="ml-10">
               <a
                 href="https://www.linkedin.com/in/sk11111"
-                className="text-blue-400 hover:text-blue-300"
+                className="text-gray-200 hover:text-gray-100"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -66,7 +65,7 @@ const Header = () => {
             <li>
               <a
                 href="https://github.com/sheharyarcodes"
-                className="text-blue-400 hover:text-blue-300"
+                className="text-gray-200 hover:text-gray-100"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -88,26 +87,25 @@ const Header = () => {
             <div
               className={`mobile-menu ${
                 expand ? "block" : "hidden"
-              } absolute top-full left-0 bg-gray-900 w-full md:hidden transition-all duration-300`}
+              } absolute z-50 top-full left-0 bg-black w-full md:hidden transition-all duration-300`}
             >
               <ul className="flex flex-col gap-2 items-center justify-center px-10 pb-4 ">
                 {items.map((item) => (
                   <li key={item.name}>
-                    <Link
+                    <NavLink
                       to={item.to}
                       onClick={() => setExpand(false)}
-                      className="text-blue-400 hover:text-blue-300 font-semibold flex items-center gap-1 border-b border-transparent hover:border-blue-300 transition-all duration-300"
-                      aria-current="page"
+                      className="text-gray-200 hover:text-gray-100 font-semibold flex items-center gap-1 border-b border-transparent hover:border-gray-100 transition-all duration-300"
                     >
                       <span className="text-sm">{item.icon}</span>
                       {item.name}
-                    </Link>
+                    </NavLink>
                   </li>
                 ))}
                 <li className="flex gap-4 items-center my-2">
                   <a
                     href="https://www.linkedin.com/in/sk11111"
-                    className="text-blue-400 hover:text-blue-300"
+                    className="text-gray-200 hover:text-gray-100"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -115,7 +113,7 @@ const Header = () => {
                   </a>
                   <a
                     href="https://github.com/sheharyarcodes"
-                    className="text-blue-400 hover:text-blue-300"
+                    className="text-gray-200 hover:text-gray-100"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

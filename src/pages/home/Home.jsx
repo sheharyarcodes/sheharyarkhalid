@@ -1,159 +1,45 @@
 import React from "react";
-// import { Container, Row, Col } from "react-bootstrap";
-// import homeLogo from "../../Assets/home-main.svg";
-// import Particle from "../Particle";
-// import Home2 from "./Home2";
-// import Type from "./Type";
-
-// import React from "react";
-// import { Container, Row, Col } from "react-bootstrap";
-// import myImg from "../../Assets/avatar.svg";
-// import Tilt from "react-parallax-tilt";
-// import {
-//   AiFillGithub,
-//   AiOutlineTwitter,
-//   AiFillInstagram,
-// } from "react-icons/ai";
-// import { FaLinkedinIn } from "react-icons/fa";
+import heroBannerSVG from "../../assets/heroBanner.svg";
+import { Particle, TypeWriter, Button, Container } from "../../components";
+import { FaTelegramPlane } from "react-icons/fa";
 
 function Home() {
-  return;
-  <section>
-    <Container fluid className="home-section" id="home">
-      <Particle />
-      <Container className="home-content">
-        <Row>
-          <Col md={7} className="home-header">
-            <h1 style={{ paddingBottom: 15 }} className="heading">
-              Hi There!{" "}
-              <span className="wave" role="img" aria-labelledby="wave">
-                👋🏻
+  const handleEmailClick = () => {
+    window.open("mailto:sheharyarkhalid.me@gmail.com", "_blank");
+  };
+
+  return (
+    <section id="home">
+      <Container className="px-10 pt-24 md:pt-40 text-gray-800 flex flex-col md:flex-row gap-20">
+        <Particle />
+        <div className="w-full md:w-1/2 xl:pl-40 lg:pt-20 flex flex-col justify-center md:justify-start text-xl font-bold">
+          <h1 className="text-4xl lg:text-6xl">
+            <div>Hi There!👋</div>
+
+            <div className="flex flex-col">
+              I'm a
+              <span className="text-[#B968C7] text-2xl lg:text-4xl select-none">
+                <TypeWriter />
               </span>
-            </h1>
-
-            <h1 className="heading-name">
-              I'M
-              <strong className="main-name"> SOUMYAJIT BEHERA</strong>
-            </h1>
-
-            <div style={{ padding: 50, textAlign: "left" }}>
-              <Type />
             </div>
-          </Col>
+          </h1>
 
-          <Col md={5} style={{ paddingBottom: 20 }}>
-            <img
-              src={homeLogo}
-              alt="home pic"
-              className="img-fluid"
-              style={{ maxHeight: "450px" }}
-            />
-          </Col>
-        </Row>
+          <Button className="mt-4 lg:mt-8" onClick={handleEmailClick}>
+            <FaTelegramPlane />
+            Hire Me!
+          </Button>
+        </div>
+
+        <div className="w-full md:w-1/2 overflow-hidden select-none">
+          <img
+            src={heroBannerSVG}
+            alt="home-pic"
+            className="w-full h-full object-contain"
+          />
+        </div>
       </Container>
-    </Container>
-
-    {/* home 2 */}
-
-    <Container fluid className="home-about-section" id="about">
-      <Container>
-        <Row>
-          <Col md={8} className="home-about-description">
-            <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
-            </h1>
-            <p className="home-about-body">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
-              <br />
-              <br />I am fluent in classics like
-              <i>
-                <b className="purple"> C++, Javascript and Go. </b>
-              </i>
-              <br />
-              <br />
-              My field of Interest's are building new &nbsp;
-              <i>
-                <b className="purple">Web Technologies and Products </b> and
-                also in areas related to <b className="purple">Blockchain.</b>
-              </i>
-              <br />
-              <br />
-              Whenever possible, I also apply my passion for developing products
-              with <b className="purple">Node.js</b> and
-              <i>
-                <b className="purple">
-                  {" "}
-                  Modern Javascript Library and Frameworks
-                </b>
-              </i>
-              &nbsp; like
-              <i>
-                <b className="purple"> React.js and Next.js</b>
-              </i>
-            </p>
-          </Col>
-          <Col md={4} className="myAvtar">
-            <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
-            </Tilt>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={12} className="home-about-social">
-            <h1>FIND ME ON</h1>
-            <p>
-              Feel free to <span className="purple">connect </span>with me
-            </p>
-            <ul className="home-about-social-links">
-              <li className="social-icons">
-                <a
-                  href="https://github.com/soumyajit4419"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiFillGithub />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://twitter.com/Soumyajit4419"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiOutlineTwitter />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.linkedin.com/in/soumyajit4419/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <FaLinkedinIn />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.instagram.com/soumyajit4419"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiFillInstagram />
-                </a>
-              </li>
-            </ul>
-          </Col>
-        </Row>
-      </Container>
-    </Container>
-
-    {/* home 2 */}
-  </section>;
+    </section>
+  );
 }
 
 export default Home;

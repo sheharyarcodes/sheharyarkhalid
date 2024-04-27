@@ -1,43 +1,35 @@
 import React from "react";
-// import Card from "react-bootstrap/Card";
 import { ImPointRight } from "react-icons/im";
 
 function AboutCard() {
-  return;
-  <Card className="quote-card-view">
-    <Card.Body>
-      <blockquote className="blockquote mb-0">
-        <p style={{ textAlign: "justify" }}>
-          Hi Everyone, I am <span className="purple">Soumyajit Behera </span>
-          from <span className="purple"> Bhubaneswar, India.</span>
-          <br />
-          I am currently employed as a software developer at Juspay.
-          <br />
-          I have completed Integrated MSc (IMSc) in Maths and Computing at BIT
-          Mesra.
-          <br />
-          <br />
-          Apart from coding, some other activities that I love to do!
-        </p>
-        <ul>
-          <li className="about-activity">
-            <ImPointRight /> Playing Games
-          </li>
-          <li className="about-activity">
-            <ImPointRight /> Writing Tech Blogs
-          </li>
-          <li className="about-activity">
-            <ImPointRight /> Travelling
-          </li>
-        </ul>
-
-        <p style={{ color: "rgb(155 126 172)" }}>
-          "Strive to build things that make a difference!"{" "}
-        </p>
-        <footer className="blockquote-footer">Soumyajit</footer>
-      </blockquote>
-    </Card.Body>
-  </Card>;
+  return (
+    <blockquote className="blockquote text-gray-700 text-md md:text-md flex flex-col gap-2 text-justify font-semibold xl:px-40">
+      <p className="text-lg self-center md:text-2xl">
+        I am <span className="text-[#7e4389] font-bold">Sheharyar Khalid </span>
+        from{" "}
+        <span className="text-green-800 font-bold"> Punjab, Pakistan.</span>
+      </p>
+      <p className="">
+        As a frontend developer, I am deeply passionate about crafting
+        exceptional web experiences. I specialize in developing responsive
+        websites meticulously designed for optimal performance and usability. My
+        commitment lies in keeping abreast of the latest web technologies and
+        adhering to industry best practices. I thrive in collaborative
+        environments, where I can seamlessly collaborate with designers and
+        fellow developers to bring concepts to fruition. If you're keen to learn
+        more about my work, feel free to contact me on my{" "}
+        <a
+          href="https://www.linkedin.com/in/sk11111"
+          className="text-[#7e4389] font-bold hover:text-black hover:underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          linkedin
+        </a>
+        .
+      </p>
+    </blockquote>
+  );
 }
 
 export default AboutCard;

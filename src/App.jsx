@@ -1,12 +1,21 @@
 import React from "react";
 import { Home, About, Projects } from "./pages";
-import { Header, Footer } from "./components";
+import { Header, Footer, Container } from "./components";
 
 const App = () => {
   return (
-    <div className="min-h-screen">
+    <div id="top" className="min-h-screen bg-gray-100">
       <Header />
-      <div className="bg-white py-40"></div>
+      <main>
+        <Home />
+        <About />
+        <Projects />
+
+        <div className="text-center font-semibold w-full py-10">
+          Thanks for exploring my portfolio___😊
+        </div>
+      </main>
+
       <Footer />
     </div>
   );

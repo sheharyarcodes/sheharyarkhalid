@@ -6,6 +6,7 @@ import Particle from "./Particle";
 import Pre from "./Pre";
 import ScrollToTop from "./ScrollToTop";
 import TypeWriter from "./TypeWriter";
+import Button from "./Button";
 
 export {
   Header,
@@ -16,4 +17,5 @@ export {
   Pre,
   ScrollToTop,
   TypeWriter,
+  Button,
 };
