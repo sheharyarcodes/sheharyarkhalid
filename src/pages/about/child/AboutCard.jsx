@@ -5,7 +5,7 @@ function AboutCard() {
   return (
     <blockquote className="blockquote text-gray-700 text-md md:text-md flex flex-col gap-2 text-justify font-semibold xl:px-40">
       <p className="text-lg self-center md:text-2xl">
-        I am <span className="text-[#7e4389] font-bold">Sheharyar Khalid </span>
+        I am <span className="text-[#B968C7] font-bold">Sheharyar Khalid </span>
         from{" "}
         <span className="text-green-800 font-bold"> Punjab, Pakistan.</span>
       </p>
@@ -20,7 +20,7 @@ function AboutCard() {
         more about my work, feel free to contact me on my{" "}
         <a
           href="https://www.linkedin.com/in/sk11111"
-          className="text-[#7e4389] font-bold hover:text-black hover:underline"
+          className="text-[#B968C7] font-bold hover:text-black hover:underline"
           target="_blank"
           rel="noopener noreferrer"
         >

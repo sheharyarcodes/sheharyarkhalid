@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Home, About, Projects, EndPage } from "./pages";
-import { Header, Footer, ParticlesComponent } from "./components";
+import { Header, Footer, ParticlesComponent, Preloader } from "./components";
 
 const App = () => {
-  return (
+  const [load, setLoad] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoad(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  // return <Preloader />;
+
+  return load ? (
+    <Preloader />
+  ) : (
     <div className="min-h-screen bg-gray-100">
       <Header />
       <main>

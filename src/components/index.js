@@ -5,6 +5,7 @@ import Logo from "./Logo";
 import ParticlesComponent from "./particles/ParticlesComponent";
 import TypeWriter from "./TypeWriter";
 import Button from "./Button";
+import Preloader from "./Preloader";
 
 export {
   Header,
@@ -14,4 +15,5 @@ export {
   ParticlesComponent,
   TypeWriter,
   Button,
+  Preloader,
 };

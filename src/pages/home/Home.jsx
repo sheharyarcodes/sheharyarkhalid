@@ -15,15 +15,7 @@ function Home() {
           <h1 className="text-3xl lg:text-6xl">
             <div className="flex items-center">
               Hi There!
-              <span
-                className="lg:text-5xl"
-                style={{
-                  animationName: "wave-animation",
-                  animationDuration: "2.1s",
-                  animationIterationCount: "infinite",
-                  transformOrigin: "70% 70%",
-                }}
-              >
+              <span className="lg:text-5xl origin-bottom-right animate-[wave_2.1s_infinite]">
                 👋
               </span>
             </div>
