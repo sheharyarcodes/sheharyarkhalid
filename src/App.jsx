@@ -2,20 +2,26 @@ import React, { useState, useEffect } from "react";
 import { Home, About, Projects, EndPage } from "./pages";
 import { Header, Footer, ParticlesComponent, Preloader } from "./components";
 
+// used in particle component
+import { initParticlesEngine } from "@tsparticles/react";
+import { loadFull } from "tsparticles";
+
 const App = () => {
-  const [load, setLoad] = useState(true);
+  const [init, setInit] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoad(false);
-    }, 2000);
+    if (init) {
+      return;
+    }
 
-    return () => clearTimeout(timer);
+    initParticlesEngine(async (engine) => {
+      await loadFull(engine);
+    }).then(() => {
+      setInit(true);
+    });
   }, []);
 
-  // return <Preloader />;
-
-  return load ? (
+  return !init ? (
     <Preloader />
   ) : (
     <div className="min-h-screen bg-gray-100">
@@ -26,7 +32,7 @@ const App = () => {
         <Projects />
         <EndPage />
       </main>
-      <ParticlesComponent />
+      <ParticlesComponent init={init} />
       <Footer />
     </div>
   );
