@@ -1,5 +1,5 @@
 import React from "react";
-import { Particle, Container } from "../../components";
+import { Container } from "../../components";
 import ProjectCard from "./child/ProjectsCard";
 import blogAppImg from "../../assets/projectsImage/blogAppImg.png";
 import ecommerceWebsiteImg from "../../assets/projectsImage/ecommerceWebsiteImg.png";
@@ -39,13 +39,12 @@ const Projects = () => {
   ];
   return (
     <section id="projects">
-      <Container className="px-10 pt-20">
-        <Particle />
+      <Container className="px-10 pt-28">
         <h2 className=" text-center text-gray-900 font-bold text-3xl sm:text-6xl mb-8 md:mb-20">
           My Recent Projects.
         </h2>
         {/* <p>Here are a few projects I've worked on recently.</p> */}
-        <div className="w-full flex flex-col items-center gap-16">
+        <div className=" w-full flex flex-col items-center gap-16">
           {items.map((item) => (
             <ProjectCard key={item.id} {...item} />
           ))}

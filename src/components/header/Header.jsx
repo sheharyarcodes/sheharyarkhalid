@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Logo, Container } from "../";
-import { NavLink } from "react-router-dom";
 import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
@@ -43,13 +42,13 @@ const Header = () => {
           <ul className="hidden md:flex items-center gap-6">
             {items.map((item) => (
               <li key={item.name}>
-                <NavLink
-                  to={item.to}
-                  className={`flex items-center text-gray-200 hover:text-gray-100 font-semibold gap-1 border-b-2 border-transparent hover:border-gray-100 transition-all`}
+                <a
+                  href={item.to}
+                  className={`flex items-center cursor-pointer text-gray-200 hover:text-gray-100 font-semibold gap-1 border-b-2 border-transparent hover:border-gray-100 transition-all`}
                 >
                   <span className="text-sm">{item.icon}</span>
                   {item.name}
-                </NavLink>
+                </a>
               </li>
             ))}
             <li className="ml-10">
@@ -92,14 +91,14 @@ const Header = () => {
               <ul className="flex flex-col gap-2 items-center justify-center px-10 pb-4 ">
                 {items.map((item) => (
                   <li key={item.name}>
-                    <NavLink
-                      to={item.to}
+                    <a
+                      href={item.to}
                       onClick={() => setExpand(false)}
                       className="text-gray-200 hover:text-gray-100 font-semibold flex items-center gap-1 border-b border-transparent hover:border-gray-100 transition-all duration-300"
                     >
                       <span className="text-sm">{item.icon}</span>
                       {item.name}
-                    </NavLink>
+                    </a>
                   </li>
                 ))}
                 <li className="flex gap-4 items-center my-2">

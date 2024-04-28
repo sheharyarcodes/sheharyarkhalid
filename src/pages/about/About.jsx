@@ -1,5 +1,5 @@
 import React from "react";
-import { Particle, Container } from "../../components";
+import { Container } from "../../components";
 import TechStack from "./child/TechStack";
 import AboutCard from "./child/AboutCard";
 import GitHub from "./child/GitHub";
@@ -7,8 +7,7 @@ import GitHub from "./child/GitHub";
 function About() {
   return (
     <section id="about">
-      <Container className="px-10 pt-20 max-w-[1200px]">
-        <Particle />
+      <Container className="px-10 pt-28 max-w-[1200px]">
         <h2 className="text-center text-gray-900 font-bold text-3xl sm:text-6xl mb-8 md:mb-10">
           About Me
         </h2>

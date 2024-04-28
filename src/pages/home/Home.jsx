@@ -1,6 +1,6 @@
 import React from "react";
 import heroBannerSVG from "../../assets/heroBanner.svg";
-import { Particle, TypeWriter, Button, Container } from "../../components";
+import { TypeWriter, Button, Container } from "../../components";
 import { FaTelegramPlane } from "react-icons/fa";
 
 function Home() {
@@ -10,15 +10,27 @@ function Home() {
 
   return (
     <section id="home">
-      <Container className="px-10 pt-24 md:pt-40 text-gray-800 flex flex-col md:flex-row gap-20">
-        <Particle />
+      <Container className="px-10 pt-32 md:pt-40 text-gray-800 flex flex-col md:flex-row gap-20">
         <div className="w-full md:w-1/2 xl:pl-40 lg:pt-20 flex flex-col justify-center md:justify-start text-xl font-bold">
-          <h1 className="text-4xl lg:text-6xl">
-            <div>Hi There!👋</div>
+          <h1 className="text-3xl lg:text-6xl">
+            <div className="flex items-center">
+              Hi There!
+              <span
+                className="lg:text-5xl"
+                style={{
+                  animationName: "wave-animation",
+                  animationDuration: "2.1s",
+                  animationIterationCount: "infinite",
+                  transformOrigin: "70% 70%",
+                }}
+              >
+                👋
+              </span>
+            </div>
 
             <div className="flex flex-col">
               I'm a
-              <span className="text-[#B968C7] text-2xl lg:text-4xl select-none">
+              <span className="text-[#B968C7] text-xl lg:text-4xl select-none">
                 <TypeWriter />
               </span>
             </div>

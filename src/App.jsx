@@ -1,21 +1,18 @@
 import React from "react";
-import { Home, About, Projects } from "./pages";
-import { Header, Footer, Container } from "./components";
+import { Home, About, Projects, EndPage } from "./pages";
+import { Header, Footer, ParticlesComponent } from "./components";
 
 const App = () => {
   return (
-    <div id="top" className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-100">
       <Header />
       <main>
         <Home />
         <About />
         <Projects />
-
-        <div className="text-center font-semibold w-full py-10">
-          Thanks for exploring my portfolio___😊
-        </div>
+        <EndPage />
       </main>
-
+      <ParticlesComponent />
       <Footer />
     </div>
   );
