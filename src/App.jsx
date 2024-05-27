@@ -7,23 +7,25 @@ import { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 
 const App = () => {
-  const [init, setInit] = useState(false);
+  // const [init, setInit] = useState(false);
 
-  useEffect(() => {
-    if (init) {
-      return;
-    }
+  // useEffect(() => {
+  //   if (init) {
+  //     return;
+  //   }
 
-    initParticlesEngine(async (engine) => {
-      await loadFull(engine);
-    }).then(() => {
-      setInit(true);
-    });
-  }, []);
+  //   initParticlesEngine(async (engine) => {
+  //     await loadFull(engine);
+  //   }).then(() => {
+  //     setInit(true);
+  //   });
+  // }, []);
 
-  return !init ? (
-    <Preloader />
-  ) : (
+  // return !init ? (
+  //   <Preloader />
+  // ) :
+
+  return (
     <div className="min-h-screen bg-gray-100">
       <Header />
       <main>
@@ -32,7 +34,7 @@ const App = () => {
         <Projects />
         <EndPage />
       </main>
-      <ParticlesComponent init={init} />
+      {/* <ParticlesComponent init={init} /> */}
       <Footer />
     </div>
   );
